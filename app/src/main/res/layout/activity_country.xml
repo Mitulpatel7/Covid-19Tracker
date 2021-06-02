@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".CountryActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:imeOptions="actionSearch"
+        android:hint="Search..."
+        android:maxLines="1"
+        android:drawablePadding="5dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/custom_search_view_bg"
+        android:drawableLeft="@drawable/search"
+        android:layout_margin="10dp"
+        android:id="@+id/search_view"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country name"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Cases"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerview"
+        tools:listitem="@layout/custom_country_data_layoout"
+        />
+
+
+</LinearLayout>
